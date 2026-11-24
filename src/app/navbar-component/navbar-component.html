@@ -1,0 +1,14 @@
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<p>navbar-component works!</p>
+
+<nav>
+  <ul>
+    <li><button (click)="PageName='home'; SelectedPage()" [class.active]="selectedPage === 'home'">Home</button></li>
+    <li><button (click)="PageName='products'; SelectedPage()" [class.active]="selectedPage === 'products'">Products</button></li>
+    <li><button (click)="PageName='about us'; SelectedPage()" [class.active]="selectedPage === 'about us'">About Us</button></li>
+    <li><button (click)="PageName='contact us'; SelectedPage()" [class.active]="selectedPage === 'contact us'">Contact Us</button></li>
+  </ul>
+</nav>
+<p><strong>Selected Page:</strong> {{selectedPage}} </p>
