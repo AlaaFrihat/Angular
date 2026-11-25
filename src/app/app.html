@@ -33,3 +33,23 @@
   <app-product-details-component></app-product-details-component>
   <app-footer-component></app-footer-component>
 
+  ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TASK3>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  
+
+<app-product-details-component
+  [ProductName]="ProductName()"
+  [ProductDescription]="ProductDescription()"
+  [ProductPrice]="ProductPrice()"
+  [ProductStatus]="ProductAvailability()"
+  (addToCartEvent)="handleAddToCart($event)">
+</app-product-details-component>
+<button (click)="showSecondProduct()">Show Second Product</button>
+
+  
+
+<hr>
+
+  <app-shopping-cart-component 
+  [productName]="selectedProductName" 
+  [quantity]="selectedQuantity" 
+  [productPrice]="selectedProductPrice"></app-shopping-cart-component>

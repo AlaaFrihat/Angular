@@ -79,4 +79,31 @@ constructor() {
     }
   }
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ProductName = signal('Laptop');
+ProductDescription = signal('High-performance laptop');
+ProductPrice = signal(750);
+ProductAvailability = signal('In Stock');
+
+
+selectedProductName: string = '';
+  selectedQuantity: number = 0;
+  selectedProductPrice: number = 0;
+
+  handleAddToCart(data: { name: string; quantity: number ; price: number }): void {
+    this.selectedProductName = data.name;
+    this.selectedQuantity = data.quantity;
+    this.selectedProductPrice = data.price;
+  }
+
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  
+ showSecondProduct(): void {
+  this.ProductName.set('Wireless Headphones');
+  this.ProductDescription.set('Bluetooth Headphones');
+  this.ProductPrice.set(120);
+  this.ProductAvailability.set('Available');
+}
+
 }

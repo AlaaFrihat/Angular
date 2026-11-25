@@ -10,3 +10,13 @@
   <p>Status: {{ ProductStatus }}</p>
   <p>Quantity: {{ quantity }}</p>
   <p>Discount: {{ discountPercentage }}%</p>
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  <p>Product Quantity: {{ ProductQuantity() }}</p>
+  <button (click)="increaseQuantity()">Increase Quantity</button>
+  <button (click)="decreaseQuantity()">Decrease Quantity</button>
+  <button (click)="AddToCart()">Add to Cart</button>
+  <p>{{ProductName}}</p>
+  <p>{{ProductDescription}}</p>
+  <P>{{ProductPrice | currency: 'USD'}}</P>
+  <p>Quantity: {{ quantity }}</p>
