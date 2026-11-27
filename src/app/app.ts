@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -99,11 +99,35 @@ selectedProductName: string = '';
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   
- showSecondProduct(): void {
+  showSecondProduct(): void {
   this.ProductName.set('Wireless Headphones');
   this.ProductDescription.set('Bluetooth Headphones');
   this.ProductPrice.set(120);
   this.ProductAvailability.set('Available');
 }
 
+role: string = 'Admin';
+products = [
+    {
+      name: 'MacBook Pro',
+      price: 75.99,
+      image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400',
+      inStock: true,
+      onSale: true
+    },
+    {
+      name: 'iPad Air',
+      price: 19.00,
+      image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400',
+      inStock: false,
+      onSale: false
+    },
+    {
+      name: 'iPad Air',
+      price: 18.00,
+      image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400',
+      inStock: false,
+      onSale: false
+    }
+  ];
 }

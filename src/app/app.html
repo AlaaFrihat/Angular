@@ -53,3 +53,49 @@
   [productName]="selectedProductName" 
   [quantity]="selectedQuantity" 
   [productPrice]="selectedProductPrice"></app-shopping-cart-component>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TASK>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+<div class="container">
+  @for (item of products; track item.name) {
+    <div class="card">
+
+      
+      <span class="badge" [ngClass]="{ 'green': item.inStock, 'red': !item.inStock }">
+        @if (item.inStock) {
+          In Stock
+        } @else {
+          Out of Stock
+        }
+      </span>
+
+      @if (item.onSale) {
+        <span class="sale">On Sale</span>
+      }
+
+      <img [src]="item.image" [alt]="item.name">
+      <h3>{{ item.name }}</h3>
+
+  
+      <p [ngStyle]="{ 'font-weight': 'bold', 'color': 'orange' }">
+        ${{ item.price }}
+      </p>
+
+      
+      @switch (role) {
+        @case ('Admin') {
+          <button>Actions</button>
+          <button>Admin only</button>
+        }
+        @case ('User') {
+          <button [disabled]="!item.inStock">Buy Now</button>
+        }
+      }
+
+    </div>
+  }
+</div>
+
+

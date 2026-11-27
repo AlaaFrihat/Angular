@@ -36,4 +36,6 @@ export class ProductDetailsComponent {
       price: this.ProductPrice
     });
   }
+
+  
 }
